@@ -1,0 +1,30 @@
+server:
+  port: 8888
+  servlet:
+    # 项目contextPath
+    context-path: /rabbitmq
+
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 127.0.0.1
+    publisher-confirms: true
+    publisher-returns: true
+
+
+
+
+
+#设置静态资源路径，多个以逗号分隔
+spring.resources.static-locations: classpath:static/,file:static/
+
+# 日志配置
+logging:
+  level:
+    czs: debug
+    org.springframework: WARN
+    org.spring.springboot.dao: debug
+
